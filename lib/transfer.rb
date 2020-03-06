@@ -11,4 +11,8 @@ class Transfer
     @sender
   end
   
+  def receiver
+    @receiver
+  end
+  
 end

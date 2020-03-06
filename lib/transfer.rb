@@ -37,7 +37,7 @@ class Transfer
   def execute_transaction
     if (@transfer_status == "complete")
       @transfer_status = "complete"
-    elsif (@sender.valid?)
+    elsif (self.valid?)
       @sender.balance = @sender.balance - self.amount
       @receiver.balance = @receiver.balance + self.amount
       @transfer_status = "complete"

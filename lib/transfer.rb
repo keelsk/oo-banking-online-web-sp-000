@@ -1,7 +1,7 @@
 require 'pry'
 class Transfer
   # your code here
-  attr_accessor :balance, :bank_account
+  attr_accessor :balance
   
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -39,7 +39,6 @@ class Transfer
       puts "The transaction rejected. Please check your account balance."
     else
       @sender.balance = @sender.balance - @amount
-      binding.pry
       @receiver.balance = @receiver.balance + @amount
       @transfer_status = "complete"
     end

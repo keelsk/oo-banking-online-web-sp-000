@@ -11,11 +11,11 @@ class Transfer
   end
   
   def sender
-    @sender = BankAccount.new(@sender)
+    @sender
   end
   
   def receiver
-    @receiver = BankAccount.new(@receiver)
+    @receiver
   end
   
   def status

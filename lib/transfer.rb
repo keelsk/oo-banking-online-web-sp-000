@@ -37,7 +37,6 @@ class Transfer
   def execute_transaction
     if (self.valid?)
       "The transaction rejected. Please check your account balance."
-      binding.pry
     elsif (@transfer_status == "complete")
       @transfer_status = "complete"
     else

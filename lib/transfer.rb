@@ -7,4 +7,8 @@ class Transfer
     @transfer_status = "pending"
   end
   
+  def sender
+    @sender
+  end
+  
 end

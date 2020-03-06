@@ -1,3 +1,5 @@
+require 'pry'
+
 class BankAccount
   
   attr_reader :name
@@ -22,5 +24,6 @@ class BankAccount
   
   def display_balance
     puts "Your balance is $#{self.balance}."
+    binding.pry
   end
 end

@@ -38,9 +38,9 @@ class Transfer
     if !(@sender.valid?) || (@sender.balance - @amount < 0)
       puts "The transaction rejected. Please check your account balance."
     else
-      @sender_balance = @sender.balance - @amount
-      @sender.balance = @sender_balance
-      @receiver_balance = @receiver.balance + @amount
+      @sender.balance = @sender.balance - @amount
+      binding.pry
+      @receiver.balance = @receiver.balance + @amount
       @transfer_status = "complete"
     end
   end

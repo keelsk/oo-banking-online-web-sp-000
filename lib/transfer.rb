@@ -38,7 +38,7 @@ class Transfer
     if (@sender.valid? == false)
       "The transaction rejected. Please check your account balance."
     elsif (@transfer_status == "complete")
-      break
+      @transfer_status = "complete"
     else
       @sender.balance = @sender.balance - self.amount
       @receiver.balance = @receiver.balance + self.amount

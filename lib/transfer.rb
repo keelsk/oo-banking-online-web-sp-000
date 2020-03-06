@@ -2,7 +2,6 @@ require 'pry'
 class Transfer
   # your code here
   attr_accessor :balance, :bankaccount
-  attr_reader :amount
   
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -49,7 +48,7 @@ class Transfer
   end
   
   def reverse_transfer
-    if @transfer_status = "complete"
+    if @transfer_status == "complete"
         @sender.balance = @sender.balance + @amount
         @receiver.balance = @receiver.balance - @amount
         @transfer_status = "reversed"

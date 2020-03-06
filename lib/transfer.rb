@@ -36,7 +36,7 @@ class Transfer
   
   def execute_transaction
     if !(@sender.valid?) || (@sender.balance - @amount < 0)
-      puts "The transaction rejected. Please check your account balance."
+      "The transaction rejected. Please check your account balance."
     else
       @sender.balance = @sender.balance - self.amount
       @receiver.balance = @receiver.balance + self.amount

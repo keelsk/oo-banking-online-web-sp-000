@@ -40,10 +40,10 @@ class Transfer
     elsif (@transfer_status == "complete")
       @transfer_status = "complete"
     else
+            binding.pry
       @sender.balance = @sender.balance - self.amount
       @receiver.balance = @receiver.balance + self.amount
       @transfer_status = "complete"
-      binding.pry
     end
   end
   

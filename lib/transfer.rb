@@ -19,4 +19,8 @@ class Transfer
     @transfer_status
   end
   
+  def valid?
+    @sender.
+  end
+  
 end

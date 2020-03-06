@@ -43,6 +43,7 @@ class Transfer
       @transfer_status = "complete"
     else
       "Transaction rejected. Please check your account balance."
+      @transfer_status = "rejected"
     end
   end
   

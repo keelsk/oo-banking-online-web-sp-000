@@ -38,8 +38,8 @@ class Transfer
     if !(@sender.valid?) || (@sender.balance - @amount < 0)
       puts "The transaction rejected. Please check your account balance."
     else
-      @sender.deposit(-@amount)
-      @receiver.deposit(@amount)
+      @sender.balance = @sender.balance - self.amount
+      @receiver.balance = @receiver.balance + self.amount
       @transfer_status = "complete"
     end
   end

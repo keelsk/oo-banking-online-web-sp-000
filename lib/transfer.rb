@@ -2,6 +2,7 @@ require 'pry'
 class Transfer
   # your code here
   attr_accessor :balance, :bankaccount
+  attr_reader :amount
   
   def initialize(sender, receiver, amount)
     @sender = sender

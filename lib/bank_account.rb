@@ -35,6 +35,6 @@ class BankAccount
     end
   end
   
-  def close_account(account)
+  def close_account
   end
 end

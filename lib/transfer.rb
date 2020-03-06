@@ -23,7 +23,7 @@ class Transfer
   end
   
   def valid?
-    if (@sender.valid? && @receiver.valid?)
+    if (@sender.valid?)
       true
     else
       false
@@ -35,7 +35,7 @@ class Transfer
   end
   
   def execute_transaction
-    if (@sender.balance < @amount)
+    if (@sender.valid? == false)
       "The transaction rejected. Please check your account balance."
       binding.pry
     elsif (@transfer_status == "complete")
